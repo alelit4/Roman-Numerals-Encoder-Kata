@@ -1,5 +1,7 @@
+import java.lang.Exception
+
 class RomanNumeralsEncoder {
     fun encode(number: Int) {
-        TODO("Not yet implemented")
+        throw Exception("No valid input")
     }
 }
