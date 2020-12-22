@@ -1,5 +1,4 @@
 import java.lang.Exception
-import java.util.ArrayList
 
 class RomanNumeralsEncoder {
     private val romanBasicNumbers: HashMap<Int, String> = hashMapOf(
@@ -11,17 +10,17 @@ class RomanNumeralsEncoder {
     fun encode(_number: Int): String {
         var number = _number
 
-        if (number !in 1..3999) {
-            throw Exception("No valid input")
-        }
-        var romanNumber = ""
-
-        for (key in romanBasicNumbers.keys.sorted().reversed()) {
-            while (number >= key) {
-                romanNumber += romanBasicNumbers[key]
-                number -= key
+        if (number in 1..3999) {
+            var romanNumber = ""
+            val orderedRomanNumbersDecimalValues = romanBasicNumbers.keys.sorted().reversed()
+            orderedRomanNumbersDecimalValues.forEach { key ->
+                while (number >= key) {
+                    romanNumber += romanBasicNumbers[key]
+                    number -= key
+                }
             }
+            return romanNumber
         }
-        return romanNumber
+        throw Exception("No valid input")
     }
 }
