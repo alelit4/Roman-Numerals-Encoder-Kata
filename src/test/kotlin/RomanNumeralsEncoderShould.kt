@@ -61,4 +61,11 @@ internal class RomanNumeralsEncoderShould {
 
         Assertions.assertEquals("XX", encodedNumber)
     }
+
+    @Test
+    fun return_XL_when_receives_40_as_input(){
+        val encodedNumber = romanNumeralsEncoder.encode(40)
+
+        Assertions.assertEquals("XL", encodedNumber)
+    }
 }
