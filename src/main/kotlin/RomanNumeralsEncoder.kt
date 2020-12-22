@@ -11,12 +11,11 @@ class RomanNumeralsEncoder {
     fun encode(_number: Int): String {
         var number = _number
 
-        if (number < 1) {
+        if (number !in 1..3999) {
             throw Exception("No valid input")
         }
         var romanNumber = ""
 
-        println(romanBasicNumbers.keys.sorted().reversed())
         for (key in romanBasicNumbers.keys.sorted().reversed()) {
             while (number >= key) {
                 romanNumber += romanBasicNumbers[key]
