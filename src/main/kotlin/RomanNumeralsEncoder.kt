@@ -15,7 +15,7 @@ class RomanNumeralsEncoder {
             return romanBasicNumbers[number].toString()
 
         for ( key in romanBasicNumbers.keys.sorted().reversed()){
-            if (number > key ){
+            if (number >= key ){
                 romanNumber += romanBasicNumbers[key]
                 number -= key
             }
