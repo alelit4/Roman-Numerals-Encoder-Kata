@@ -2,7 +2,7 @@ import java.lang.Exception
 import java.util.ArrayList
 
 class RomanNumeralsEncoder {
-    private val romanBasicNumbers: HashMap<Int, String> = hashMapOf( 1 to "I", 4 to "IV", 5 to "V")
+    private val romanBasicNumbers: HashMap<Int, String> = hashMapOf( 1 to "I", 4 to "IV", 5 to "V", 9 to "IX", 10 to "X")
 
     fun encode(_number: Int): String {
         var number = _number
