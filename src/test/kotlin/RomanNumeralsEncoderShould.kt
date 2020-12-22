@@ -19,4 +19,11 @@ internal class RomanNumeralsEncoderShould {
 
         Assertions.assertEquals("I", encodedNumber)
     }
+
+    @Test
+    fun return_II_when_receives_2_as_input(){
+        val encodedNumber = romanNumeralsEncoder.encode(2)
+
+        Assertions.assertEquals("II", encodedNumber)
+    }
 }
