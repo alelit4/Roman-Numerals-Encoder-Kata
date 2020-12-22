@@ -40,4 +40,11 @@ internal class RomanNumeralsEncoderShould {
 
         Assertions.assertEquals("IV", encodedNumber)
     }
+
+    @Test
+    fun return_VI_when_receives_6_as_input(){
+        val encodedNumber = romanNumeralsEncoder.encode(6)
+
+        Assertions.assertEquals("VI", encodedNumber)
+    }
 }
