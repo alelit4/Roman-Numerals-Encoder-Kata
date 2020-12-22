@@ -68,4 +68,26 @@ internal class RomanNumeralsEncoderShould {
 
         Assertions.assertEquals("XL", encodedNumber)
     }
+
+    @Test
+    fun return_CMXCIX_when_receives_999_as_input(){
+        val encodedNumber = romanNumeralsEncoder.encode(999)
+
+        Assertions.assertEquals("CMXCIX", encodedNumber)
+    }
+
+    @Test
+    fun return_MCDLVIII_when_receives_1458_as_input(){
+        val encodedNumber = romanNumeralsEncoder.encode(1458)
+
+        Assertions.assertEquals("MCDLVIII", encodedNumber)
+    }
+
+    @Test
+    fun  throw_exception_when_receives_4000_as_input(){
+        val exception = Assertions.assertThrows(Exception::class.java) {
+            romanNumeralsEncoder.encode(4000)
+        }
+        Assertions.assertEquals("No valid input", exception.message)
+    }
 }
