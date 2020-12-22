@@ -11,17 +11,12 @@ class RomanNumeralsEncoder {
             throw Exception("No valid input")
         }
         var romanNumber = ""
-        if(number in romanBasicNumbers.keys)
-            return romanBasicNumbers[number].toString()
 
         for ( key in romanBasicNumbers.keys.sorted().reversed()){
-            if (number >= key ){
+            while (number >= key ){
                 romanNumber += romanBasicNumbers[key]
                 number -= key
             }
-        }
-        for (element in 1..number){
-            romanNumber += "I"
         }
         return romanNumber
     }

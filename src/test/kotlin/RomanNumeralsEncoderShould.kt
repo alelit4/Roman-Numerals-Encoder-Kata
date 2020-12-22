@@ -49,7 +49,7 @@ internal class RomanNumeralsEncoderShould {
     }
 
     @Test
-    fun return_XIV_when_receives_14_as_input(){
+    fun return_XIV_when_receives_19_as_input(){
         val encodedNumber = romanNumeralsEncoder.encode(14)
 
         Assertions.assertEquals("XIV", encodedNumber)
